@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>For Nariman</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- App-like behavior -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Background floating hearts -->
+  <div class="background">
+    <div class="heart"></div>
+    <div class="heart heart-delay-1"></div>
+    <div class="heart heart-delay-2"></div>
+  </div>
+
+  <!-- Special floating heart -->
+  <div id="special-heart" class="special-heart">❤</div>
+  <div id="special-heart-message" class="special-heart-message hidden">
+    Ur such a cutie and I’m proud of you
+  </div>
+
+  <div class="app">
+
+    <header class="header">
+      <h1 id="greeting-heading">Hi, Nariman 💌</h1>
+      <p id="greeting-sub">This little app is just for you.</p>
+    </header>
+
+    <!-- Why I love you -->
+    <section class="card">
+      <h2>Why I love you</h2>
+      <p id="love-message">Tap the button below to see one reason why I love you.</p>
+      <button id="new-message-btn" class="btn-main">Why I love you</button>
+    </section>
+
+    <!-- Days counter -->
+    <section class="card">
+      <h2>Us</h2>
+      <p>
+        Days since we started this story:
+        <span id="days-counter">...</span>
+      </p>
+      <p class="small-text">
+        Since: <span id="since-date-label">2024-12-30</span>
+      </p>
+    </section>
+
+    <!-- Gratitude -->
+    <section class="card">
+      <h2>Things I’m grateful for with you (today)</h2>
+      <div id="gratitude-list"></div>
+      <p class="small-text">Just three little things for today. They’ll change over time.</p>
+    </section>
+
+    <!-- Sad button -->
+    <section class="card">
+      <h2>For when you feel sad</h2>
+      <p>
+        You never have to go through anything alone.<br>
+        Tap below whenever you need a reminder.
+      </p>
+      <button id="sad-btn" class="btn-main">Remind me</button>
+      <p id="sad-message" class="hidden"></p>
+    </section>
+
+    <!-- Emergency -->
+    <section class="card">
+      <h2>Emergency love button</h2>
+      <p>If today feels too heavy, tap this.</p>
+      <button id="emergency-btn" class="btn-main">I need extra love</button>
+      <p class="small-text">For the moments when everything is just too much.</p>
+    </section>
+
+    <!-- Music -->
+    <section class="card">
+      <h2>Soft music</h2>
+      <p>Tap play, and switch between songs whenever you feel like it.</p>
+      <button id="music-btn" class="btn-main">Play / Pause</button>
+      <button id="next-track-btn" class="btn-secondary">Next song</button>
+      <p class="small-text" id="current-track-label"></p>
+      <p class="small-text">Best with headphones, or when you’re in a quiet moment.</p>
+    </section>
+
+    <!-- Secret -->
+    <section class="card" id="secret-card">
+      <h2>A little secret</h2>
+      <p>There’s a secret letter hidden in here just for you.</p>
+      <p class="small-text hint-text">(psst… tap this card 3 times)</p>
+    </section>
+
+    <!-- Save hint -->
+    <section class="card small-text center">
+      <p>
+        On your phone, you can add this to your Home Screen so it feels like an app.
+      </p>
+    </section>
+
+    <!-- Closing -->
+    <section class="card center">
+      <p>
+        Whenever you open this, remember:<br>
+        I chose you, Nariman, and I choose you again today.
+      </p>
+    </section>
+
+  </div>
+
+  <!-- Emergency overlay -->
+  <div id="emergency-overlay" class="overlay hidden">
+    <div class="overlay-content">
+      <div class="overlay-heart">❤</div>
+      <h2>لـ نريمان</h2>
+
+      <p class="overlay-text">
+        مهما كان شعوركِ الآن، أنتِ لستِ وحدكِ. أنفاسكِ مهمة، وقلبكِ غالٍ عليّ جداً.
+        خذي وقتكِ، وتنفسّي بعمق، ولا تحملي كل شيء وحدكِ. أنا هنا، أحبكِ يا نريمان،
+        وسأظل دائمًا في صفّكِ حتى في الأيام التي لا تشعرين فيها بالقوة.
+      </p>
+
+      <p class="overlay-text small">
+        اعتبري هذا كأنني تلقيت إشعاراً الآن: أنا أفكر فيكِ وسأتواصل معكِ في أقرب وقت أستطيع. ❤
+      </p>
+
+      <button id="close-emergency-btn" class="btn-main">حسناً، سأكون بخير</button>
+    </div>
+  </div>
+
+  <!-- Secret overlay -->
+  <div id="secret-overlay" class="overlay hidden">
+    <div class="overlay-content">
+      <h2>For your eyes only</h2>
+      <p class="small-text">This is just between us.</p>
+
+      <img src="assets/secret-letter.png"
+           alt="Secret letter for Nariman"
+           class="secret-letter-image">
+
+      <button id="close-secret-btn" class="btn-main">Close</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
